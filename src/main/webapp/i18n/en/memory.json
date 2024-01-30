@@ -1,0 +1,32 @@
+{
+  "manageYourBrainApp": {
+    "memory": {
+      "home": {
+        "title": "Memories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Memory",
+        "createOrEditLabel": "Create or edit a Memory",
+        "notFound": "No Memories found"
+      },
+      "created": "A new Memory is created with identifier {{ param }}",
+      "updated": "A Memory is updated with identifier {{ param }}",
+      "deleted": "A Memory is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Memory {{ id }}?"
+      },
+      "detail": {
+        "title": "Memory"
+      },
+      "id": "Id",
+      "topic": "Topic",
+      "learnedDate": "Learned Date",
+      "key": "Key",
+      "comment": "Comment",
+      "creationDate": "Creation Date",
+      "modifiedDate": "Modified Date",
+      "appUser": "App User",
+      "tag": "Tag",
+      "mnemonic": "Mnemonic"
+    }
+  }
+}

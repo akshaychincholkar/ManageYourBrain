@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240130192450"
+  },
+  "applications": ["ManageYourBrain"],
+  "entityTableName": "app_user",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "AppUser",
+  "relationships": [
+    {
+      "otherEntityName": "memory",
+      "otherEntityRelationshipName": "appUser",
+      "relationshipName": "memory",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

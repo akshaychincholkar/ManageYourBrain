@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240130192550"
+  },
+  "applications": ["ManageYourBrain"],
+  "entityTableName": "tag",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Tag",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "memory",
+      "otherEntityRelationshipName": "tag",
+      "relationshipName": "memory",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

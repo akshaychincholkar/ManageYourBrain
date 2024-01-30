@@ -1,0 +1,79 @@
+
+application {
+  config {
+    baseName ManageYourBrain
+    applicationType monolith
+    packageName com.manageyourbrain
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework react
+  }
+  entities *
+}
+
+
+entity AppUser {
+	id Long required
+    name String required
+    email String required
+}
+
+entity Tag {
+	id Long required
+	name String required
+    creationDate Instant
+    modifiedDate Instant
+}
+
+entity Mnemonic {
+	id Long required
+	name String required
+    creationDate Instant
+    modifiedDate Instant
+}
+
+entity Memory {
+	id Long required
+	topic String required
+    learnedDate Instant required
+    key String required
+    comment String
+    creationDate Instant
+    modifiedDate Instant 
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+    AppUser to Memory{AppUser}
+    Tag to Memory{tag}
+    Mnemonic to Memory{mnemonic}
+}
+// Set pagination options
+paginate Memory with infinite-scroll
+paginate Tag with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Memory, Tag
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+/** relationship ManyToOne {
+*	Employee{manager} to Employee
+* }
+
+// defining multiple oneToOne relationships
+*relationship OneToOne {
+*	JobHistory{job} to Job
+*	JobHistory{department} to Department
+*	JobHistory{employee} to Employee
+*}
+*relationship OneToOne {
+*	Department{location} to Location
+*}
+
+*relationship ManyToMany {
+*	Job{task(title)} to Task{job}
+* }**/

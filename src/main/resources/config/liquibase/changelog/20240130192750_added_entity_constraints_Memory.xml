@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Memory.
+    -->
+    <changeSet id="20240130192750-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="app_user_id"
+                                 baseTableName="memory"
+                                 constraintName="fk_memory__app_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="app_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="tag_id"
+                                 baseTableName="memory"
+                                 constraintName="fk_memory__tag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="mnemonic_id"
+                                 baseTableName="memory"
+                                 constraintName="fk_memory__mnemonic_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mnemonic"
+                                 />
+    </changeSet>
+</databaseChangeLog>

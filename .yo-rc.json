@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "ManageYourBrain",
+    "clientFramework": "react",
+    "devServerPort": 9060,
+    "entities": ["AppUser", "Tag", "Mnemonic", "Memory"],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "MDNjNjZlMjI1OGU2NzJmYmYyYmYxOWM2MmJmMDBiOGExNjY2NzNhYmM1NjkyOTIwZWUzNjkwNTQ3YjU0ZGY1NWRiMzZlMDM2MGE4NGYwMTdlMDg4MGFhYzVlOGJjMTdkNjJiNzY5NTVkMTJlMGUwZTA4NjRhOTRhOTE1NjRmMTE=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1706642870000,
+    "nativeLanguage": "en",
+    "packageFolder": "com/manageyourbrain",
+    "packageName": "com.manageyourbrain",
+    "prodDatabaseType": "mysql"
+  }
+}

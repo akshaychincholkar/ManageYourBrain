@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20240130192650"
+  },
+  "applications": ["ManageYourBrain"],
+  "entityTableName": "mnemonic",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Mnemonic",
+  "relationships": [
+    {
+      "otherEntityName": "memory",
+      "otherEntityRelationshipName": "mnemonic",
+      "relationshipName": "memory",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

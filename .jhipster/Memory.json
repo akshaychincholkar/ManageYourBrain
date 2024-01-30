@@ -1,0 +1,64 @@
+{
+  "annotations": {
+    "changelogDate": "20240130192750"
+  },
+  "applications": ["ManageYourBrain"],
+  "entityTableName": "memory",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topic",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "learnedDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "key",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Memory",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "appUser",
+      "relationshipName": "appUser",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "tag",
+      "relationshipName": "tag",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "mnemonic",
+      "relationshipName": "mnemonic",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

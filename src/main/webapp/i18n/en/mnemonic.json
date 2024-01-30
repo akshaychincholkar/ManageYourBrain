@@ -1,0 +1,27 @@
+{
+  "manageYourBrainApp": {
+    "mnemonic": {
+      "home": {
+        "title": "Mnemonics",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Mnemonic",
+        "createOrEditLabel": "Create or edit a Mnemonic",
+        "notFound": "No Mnemonics found"
+      },
+      "created": "A new Mnemonic is created with identifier {{ param }}",
+      "updated": "A Mnemonic is updated with identifier {{ param }}",
+      "deleted": "A Mnemonic is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mnemonic {{ id }}?"
+      },
+      "detail": {
+        "title": "Mnemonic"
+      },
+      "id": "Id",
+      "name": "Name",
+      "creationDate": "Creation Date",
+      "modifiedDate": "Modified Date",
+      "memory": "Memory"
+    }
+  }
+}
