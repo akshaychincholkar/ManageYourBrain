@@ -21,7 +21,7 @@ public class Authority implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @NotNull
+    //    @NotNull
     @Size(max = 50)
     @Id
     @Column(length = 50)
